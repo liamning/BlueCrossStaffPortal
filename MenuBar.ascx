@@ -11,7 +11,7 @@
      
     <ul id="topMenu">
         <li><a href="home.aspx"><div class="filter"></div><div class="content">HOME</div></a></li>
-        <li><a href="http://172.16.2.108/page_com/Login.aspx"><div class="filter"></div><div class="content">E-LEAVE</div></a></li>
+        <li><a href="javascript: var win = window.open('http://172.16.2.108/page_com/Login.aspx');"><div class="filter"></div><div class="content">E-LEAVE</div></a></li>
         <li runat="server" style="display:none;" id="liAdmin1"><a href="javascript:;"><div class="filter" ></div><div class="content">E-Payslip</div></a></li>
         <li runat="server" style="display:none;" id="liAdmin2"><a href="javascript:;"><div class="filter" ></div><div class="content">E-Tax</div></a></li>
         <li><a href="CareerList.aspx" ><div class="filter"></div><div class="content">CAREER OPPORTUNITIES</div></a></li>
