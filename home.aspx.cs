@@ -49,7 +49,7 @@ public partial class _Home : System.Web.UI.Page
             {
                 latestNews.Append(string.Format("<li style='word-wrap:break-word;'><a href='{1}' style='position: relative;'><span class='blueFont'>{2:" 
                     + GlobalSetting.DateTimeFormat 
-                    + "}</span>&nbsp&nbsp&nbsp{0}&nbsp&nbsp&nbsp<img src='Resource/Image/New_icons.gif' style='position: absolute; bottom: 0.5px;'></a></li>", 
+                    + "}</span><span style='margin-right: 25px;'>&nbsp&nbsp&nbsp{0}&nbsp&nbsp&nbsp</span><img src='Resource/Image/New_icons.gif' style='position: absolute; bottom: 0.5px;'></a></li>", 
                     news.Title,
                     "ViewArticle.aspx?ID=" + news.ID.ToString(), 
                     news.EffectiveDate));
