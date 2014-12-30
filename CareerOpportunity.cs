@@ -202,15 +202,17 @@ public class CareerOpportunity
 
             if (total != 0) {
                 sql = string.Format("select top {0} * from [CareerOpportunity] "
-                + " join SystemPara on SystemPara.ID = JobFunction"
-                + " where status = '{1}' order by [Division], SystemPara.[Description]",
+                + " join SystemPara para1 on para1.ID = JobFunction"
+                + " join SystemPara para2 on para2.ID = Division"
+                + " where status = '{1}' order by para2.[Description], para1.[Description]",
                                             total,
                                             GlobalSetting.ArticleStatus.Published);
             }
             else {
                 sql = string.Format("select * from [CareerOpportunity] "
-                + " join SystemPara on SystemPara.ID = JobFunction"
-                + " where status = '{0}' order by [Division], SystemPara.[Description]",
+                + " join SystemPara para1 on para1.ID = JobFunction"
+                + " join SystemPara para2 on para2.ID = Division"
+                + " where status = '{0}' order by para2.[Description], para1.[Description]",
                                             GlobalSetting.ArticleStatus.Published);
             }
             System.Data.DataTable dt = dbAccess.select(sql);
